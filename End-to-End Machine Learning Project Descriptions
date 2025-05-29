@@ -1,0 +1,162 @@
+# Telco Customer Churn Prediction - End-to-End Machine Learning Project
+
+## 📁 Project Overview
+
+This project aims to build a churn prediction model for a telecom company using the Telco Customer Churn dataset. The project covers the complete machine learning workflow including data preprocessing, feature engineering, and model building using Decision Tree and K-Nearest Neighbors (KNN).
+
+---
+
+## 📊 Dataset
+
+* **Dataset**: Telco Customer Churn
+* **Source**: Kaggle / IBM Sample Dataset
+* **Target Variable**: `Churn` (Yes/No)
+
+---
+
+## 🧹 Week 1: Data Preprocessing and Exploration
+
+### ✅ Day 1–3: Data Exploration, Missing Values, and Duplicates
+
+* **Tasks:**
+
+  * Load dataset with pandas
+  * `.info()`, `.describe()`, `.head()` for overview
+  * Identify numerical & categorical columns
+  * Handle missing values using `fillna()` and `dropna()`
+  * Remove duplicates using `.duplicated()`
+
+**Visualization:**
+
+* `exploration_fig`: Histogram of numerical features
+* `missing_fig`: Barplot of missing values per column
+
+---
+
+### ✅ Day 4–5: Outlier Detection
+
+* **Boxplot and IQR Method**
+
+  * Created boxplots for numerical columns
+  * Calculated Q1, Q3, and IQR to detect outliers
+* **Z-Score Method**
+
+  * Calculated z-scores to detect extreme outliers
+
+**Visualization:**
+
+* `iqr_fig`: Boxplots for outlier detection
+* `zscore_fig`: Histogram showing z-score distribution
+
+---
+
+### ✅ Day 6: Skewness Treatment
+
+* **Concepts:** Handled skewness using Square Root and Log transformations
+
+**Visualization:**
+
+* `before_skew_fig`: Histogram before transformation
+* `after_skew_fig`: Histogram after transformation
+
+---
+
+### ✅ Day 7: Class Imbalance
+
+* Checked for imbalance using `.value_counts()`
+* Visualized imbalance using bar plot
+
+**Visualization:**
+
+* `imbalance_fig`: Bar plot showing imbalance in target classes
+
+---
+
+## ⚙️ Week 2: Feature Engineering & Scaling
+
+### ✅ Day 8–9: Encoding
+
+* **Label Encoding**: For binary categorical variables
+* **One-Hot Encoding**: For multi-class categorical variables
+
+### ✅ Day 10–11: Scaling
+
+* **StandardScaler**: Mean = 0, Std = 1
+* **MinMaxScaler**: Normalized values between 0 and 1
+
+### ✅ Day 12–13: Feature Selection
+
+* **Correlation Analysis**: Drop highly correlated variables
+* **SelectKBest**: Chose top `k` features for training
+
+**Visualization:**
+
+* `corr_fig`: Correlation heatmap
+
+---
+
+## 🤖 Week 3: Machine Learning Models
+
+### ✅ Day 14: Decision Tree
+
+* Used `DecisionTreeClassifier`
+* Evaluated with accuracy, precision, recall, confusion matrix
+* Visualized tree with `plot_tree`
+
+**Visualization:**
+
+* `tree_fig`: Decision tree visualization
+* `cm_fig`: Confusion matrix heatmap
+
+### ✅ Day 15: K-Nearest Neighbors (KNN)
+
+* Used `KNeighborsClassifier`
+* Hyperparameter tuning on `k`
+* Evaluated with accuracy, precision, recall
+
+---
+
+## 📌 Summary of Figures
+
+| **Figure Variable** | **Description**                                           | **Type of Plot**           |
+| ------------------- | --------------------------------------------------------- | -------------------------- |
+| `exploration_fig`   | Basic distribution of numerical columns                   | Histogram                  |
+| `missing_fig`       | Count of missing values per column                        | Bar Plot                   |
+| `iqr_fig`           | Outlier detection using IQR (boxplots for all numericals) | Boxplot                    |
+| `zscore_fig`        | Outlier detection using Z-score                           | Histogram with outliers    |
+| `before_skew_fig`   | Distribution of skewed data before transformation         | Histogram                  |
+| `after_skew_fig`    | Distribution after square root/log transformation         | Histogram                  |
+| `imbalance_fig`     | Class imbalance in target variable                        | Bar Plot                   |
+| `corr_fig`          | Feature correlation heatmap                               | Heatmap                    |
+| `tree_fig`          | Visualization of Decision Tree                            | Decision Tree Plot         |
+| `cm_fig`            | Confusion matrix after model prediction                   | Heatmap (Confusion Matrix) |
+
+---
+
+## ✅ Tools & Libraries Used
+
+* Python (Pandas, NumPy)
+* Seaborn, Matplotlib
+* Scikit-learn (sklearn)
+* Jupyter Notebook / Google Colab
+
+---
+
+## 📦 Final Deliverables
+
+* `churn_model.py` or `.ipynb`: End-to-end code
+* `output/`: Folder containing all figures as `.png`
+* `report/`: This documentation in PDF or Markdown format
+* `README.md`: Project summary on GitHub
+
+---
+
+## 🔗 Upload to GitHub
+
+* Ensure all scripts, visuals, and documentation are pushed
+* Add proper README with project highlights and instructions
+* Optional: Add PowerPoint slides for each day
+
+---
+
+Let me know if you'd like this exported to PDF or need a GitHub `README.md` version!
